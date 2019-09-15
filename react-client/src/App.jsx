@@ -177,14 +177,13 @@ class App extends Component {
       });
   }
 
-  // request to server to add a recipe to the database
+  // request to server to delete a recipe from the database
   removeFromFavorites(selectedRecipe) {
     console.log("FAVORITE RECIPE:", selectedRecipe);
-    const recipeName = selectedRecipe[0];
     return axios
       .delete(`${baseUrl}/api/removeFavRecipe`, selectedRecipe)
       .then(response => {
-        alert(`${recipeName} was removed from your favorites.`);
+        alert(`Recipe was removed from your favorites.`);
         return response;
       })
       .catch(err => {

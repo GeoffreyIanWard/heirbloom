@@ -53,7 +53,7 @@ const FavRecipeItem = props => {
             color="white"
             className="fas fa-heart float-right text-danger"
             onClick={() =>
-              removeFavoritesAndRedirect([title, image_url, source_url, id])
+              removeFavoritesAndRedirect(props.favRecipe.users_recipes)
             }
           ></Button>
         </td>
